@@ -1,0 +1,8 @@
+server {
+    listen 80;
+
+    location / {
+        proxy_pass ${PROXY_TARGET};
+        proxy_ssl_server_name on;
+    }
+}
